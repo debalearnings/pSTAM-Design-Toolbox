@@ -1,0 +1,71 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, together with the two articles listed under references."
+title: "pSTAM Design Toolbox"
+abstract: "A desktop toolbox for the data-driven design of Pneumatic Silicone Tube Artificial Muscles (pSTAM): ANN surrogates of measured static contraction, inflation time and deflation time, inverted by particle-swarm optimisation over muscle length, outer diameter, wall thickness and actuation pressure."
+type: software
+license: MIT
+repository-code: "https://github.com/<github-username>/pSTAM-Design-Toolbox"
+keywords:
+  - pneumatic artificial muscle
+  - soft actuator
+  - surrogate model
+  - artificial neural network
+  - particle swarm optimisation
+  - assistive robotics
+authors:
+  - family-names: Sarkar
+    given-names: Debadrata
+    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
+  - family-names: Arora
+    given-names: Aman
+    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
+  - family-names: Majumder
+    given-names: Arunabha
+    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
+  - family-names: Sen
+    given-names: Soumen
+    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
+  - family-names: Roy
+    given-names: Shibendu Shekhar
+    affiliation: "National Institute of Technology Durgapur, India"
+references:
+  - type: article
+    title: "Hybridized neural network inspired behavioural modelling of pneumatic artificial muscles for assistive robotic applications"
+    authors:
+      - family-names: Arora
+        given-names: Aman
+      - family-names: Sarkar
+        given-names: Debadrata
+      - family-names: Majumder
+        given-names: Arunabha
+      - family-names: Sen
+        given-names: Soumen
+      - family-names: Roy
+        given-names: Shibendu Shekhar
+    journal: "Industrial Robot"
+    volume: 50
+    issue: 1
+    start: 56
+    end: 69
+    year: 2023
+    doi: "10.1108/IR-03-2022-0060"
+  - type: article
+    title: "Low-pressure pneumatic muscles: development, phenomenological modeling, and evaluation in assistive applications through sEMG analysis"
+    authors:
+      - family-names: Arora
+        given-names: Aman
+      - family-names: Sarkar
+        given-names: Debadrata
+      - family-names: Kumar
+        given-names: Amit
+      - family-names: Sen
+        given-names: Soumen
+      - family-names: Roy
+        given-names: Shibendu Shekhar
+    journal: "Journal of Mechanical Science and Technology"
+    volume: 36
+    issue: 9
+    start: 4719
+    end: 4733
+    year: 2022
+    doi: "10.1007/s12206-022-0832-0"

@@ -1,0 +1,95 @@
+=======================================================================
+ pSTAM Design Toolbox — setup and run
+=======================================================================
+Requires Python 3.10 or 3.11. The pinned NumPy 1.x stack has no prebuilt
+wheels for Python 3.12 or newer.
+
+Tested on Windows, x86-64 Linux and NVIDIA Jetson AGX Orin
+(JetPack 6, Ubuntu 22.04, ARM64).
+
+Two dependency files are provided:
+    requirements.txt          core packages, every platform
+    requirements-desktop.txt  core packages + PyQt5 from PyPI,
+                              for Windows and x86-64 Linux
+PyPI has no ARM64 Linux wheel for PyQt5, so on a Jetson (or any ARM64
+Linux machine) PyQt5 is installed with apt instead.
+
+Open a terminal in this folder (the one containing gui_app_qt.py,
+config.py, the requirements files and the pstam/, data/, assets/,
+results/ subfolders), then follow the section for your machine.
+
+-----------------------------------------------------------------------
+ A. Windows
+-----------------------------------------------------------------------
+    PowerShell:
+        py -3.11 -m venv .venv
+        .venv\Scripts\Activate.ps1
+        python -m pip install --upgrade pip
+        pip install -r requirements-desktop.txt
+
+    Command Prompt: as above, but activate with
+        .venv\Scripts\activate.bat
+
+    If PowerShell refuses to run Activate.ps1, run once:
+        Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+-----------------------------------------------------------------------
+ B. Linux x86-64
+-----------------------------------------------------------------------
+        python3.11 -m venv .venv
+        source .venv/bin/activate
+        python -m pip install --upgrade pip
+        pip install -r requirements-desktop.txt
+
+    On a minimal Ubuntu install PyQt5 may also need:
+        sudo apt install libxcb-xinerama0 libxcb-cursor0
+
+-----------------------------------------------------------------------
+ C. NVIDIA Jetson and other ARM64 Linux (Ubuntu 22.04)
+-----------------------------------------------------------------------
+        sudo apt update
+        sudo apt install python3-pyqt5 python3.10-venv
+        python3.10 -m venv --system-site-packages .venv
+        source .venv/bin/activate
+        python -m pip install --only-binary=:all: -r requirements.txt
+
+    - python3-pyqt5 is Ubuntu's prebuilt PyQt5 for the system
+      Python 3.10, so the environment must use python3.10.
+    - --system-site-packages lets the environment see that PyQt5;
+      everything else is installed inside .venv.
+    - --only-binary=:all: makes pip use prebuilt ARM64 wheels and stop
+      with a clear error instead of attempting a long source build.
+    - Do not install requirements-desktop.txt here: pip would try to
+      build PyQt5 from source and fail.
+
+-----------------------------------------------------------------------
+ Run the toolbox (all platforms, with the environment active)
+-----------------------------------------------------------------------
+        python gui_app_qt.py
+
+-----------------------------------------------------------------------
+ Export
+-----------------------------------------------------------------------
+The Optimise & Report page writes four files to results/ from the file
+name you enter:
+    <name>.csv          design, evaluated terms and constraints, convergence
+    <name>_config.json  reload later with "Load config"
+    <name>_report.txt   plain-text report
+    <name>_report.pdf   formatted report and convergence plot
+
+All text exports are written as UTF-8, so symbols such as ≤ and ≥ in
+constraint limits are preserved on every operating system.
+
+-----------------------------------------------------------------------
+ Notes
+-----------------------------------------------------------------------
+- "ModuleNotFoundError: PyQt5" means the environment is not active, the
+  install step was skipped, or (on a Jetson) the environment was created
+  without --system-site-packages. Recreate it as described above.
+- The convergence plot and the PDF report require matplotlib, which both
+  requirements files install. The optimiser and the CSV / JSON / TXT
+  exports work without it.
+- Closing the window during an optimisation asks for confirmation and
+  closes once the current run has finished.
+- A command-line run is also available:  python run_optimization.py
+=======================================================================

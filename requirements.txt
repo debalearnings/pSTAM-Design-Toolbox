@@ -1,0 +1,36 @@
+# =====================================================================
+# pSTAM Design Toolbox — Core dependencies (all platforms)
+# =====================================================================
+# Target: Python 3.10 or 3.11 inside a dedicated virtual environment.
+#
+# This file does NOT install the GUI toolkit (PyQt5), because PyQt5 is
+# installed differently on different machines:
+#   - Windows and x86-64 Linux:  pip install -r requirements-desktop.txt
+#                                (this file plus PyQt5 from PyPI)
+#   - ARM64 Linux, e.g. NVIDIA Jetson:  PyQt5 from the system package
+#     manager (apt install python3-pyqt5), then this file only.
+#     PyPI publishes no ARM64 Linux wheel for PyQt5.
+# See SETUP_AND_RUN.txt for the exact commands.
+#
+# NumPy is pinned below 2.0 on purpose: the versions below form one
+# coherent NumPy 1.x stack that installs from prebuilt wheels on
+# Windows, x86-64 Linux and ARM64 Linux.
+# ---------------------------------------------------------------------
+
+# --- Numerical core (required: the optimiser depends on these) ---
+numpy==1.23.5
+scipy==1.10.1
+pandas==1.5.3
+pyswarms==1.3.0
+
+# --- Plotting / PDF (optional) ---
+# Used for the on-screen convergence plot and the rendered PDF report.
+# Without matplotlib the toolbox still runs and the CSV / JSON / TXT
+# exports still write; only the plot and the PDF are skipped.
+matplotlib==3.7.5
+
+# --- Notes ---------------------------------------------------------------
+# - No deep-learning framework is needed: pstam/ann.py runs a NumPy
+#   forward pass and reads weights from data/*_weights.csv via pandas.
+# - normalisation.xlsx is not read at runtime, so openpyxl is not required.
+# -------------------------------------------------------------------------
