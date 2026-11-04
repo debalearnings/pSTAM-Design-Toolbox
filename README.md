@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="pSTAM Design Toolbox logo" width="300">
+  <img src="assets/readme/logo.webp" alt="pSTAM Design Toolbox logo" width="300">
 </p>
 
 <h1 align="center">pSTAM Design Toolbox</h1>
@@ -73,18 +73,9 @@ The **pSTAM Design Toolbox** closes that loop for **Pneumatic Silicone Tube Arti
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A["<b>Design space</b><br/>bounds on L · D · T · P"] --> B["<b>Particle swarm</b><br/>candidate designs"]
-    B --> C["<b>ANN surrogates</b><br/>M1 δ · M2 t<sub>inf</sub> · M3 t<sub>def</sub>"]
-    C --> D["<b>Objective + penalties</b><br/>weighted terms, constraints"]
-    D -. "cost per particle, every iteration" .-> B
-    D -- "after the last iteration" --> E["<b>Optimal design</b><br/>report and exports"]
-    classDef io fill:#DDEFF1,stroke:#0E7C86,stroke-width:2px,color:#16242E;
-    classDef core fill:#FFFFFF,stroke:#0E7C86,stroke-width:2px,color:#16242E;
-    classDef out fill:#FBF0E3,stroke:#C9772C,stroke-width:2px,color:#16242E;
-    class A io; class B,C,D core; class E out;
-```
+<p align="center">
+  <img src="assets/readme/how_it_works.png" alt="How it works: the design-space bounds feed a particle swarm of candidate designs; the ANN surrogates M1, M2 and M3 predict each candidate's behaviour; the objective and constraint penalties give each particle a cost that steers the swarm every iteration; after the last iteration the optimal design is reported and exported." width="100%">
+</p>
 
 **Design variables** — the quantities the swarm searches:
 
@@ -115,30 +106,33 @@ which is maximised or minimised. Each enabled constraint compares its aggregated
 
 ## The five tabs
 
+<sub>Click any screenshot to open it at full resolution.</sub>
+
+
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="assets/readme/tab_1_home.png" alt="Home tab" width="100%"><br>
+      <a href="assets/readme/tab_1_home.png"><img src="assets/readme/thumbs/tab_1_home.webp" alt="Home tab" width="100%"></a><br>
       <b>1 · Home</b> — overview, the experimental gallery, authors, the underlying manuscripts and patents, and loading a saved configuration.
     </td>
     <td width="50%" valign="top">
-      <img src="assets/readme/tab_2_design_space.png" alt="Design Space tab" width="100%"><br>
+      <a href="assets/readme/tab_2_design_space.png"><img src="assets/readme/thumbs/tab_2_design_space.webp" alt="Design Space tab" width="100%"></a><br>
       <b>2 · Design Space</b> — set the search bounds on L, D, T and P against the surrogates' training limits.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <img src="assets/readme/tab_3_surrogate_models.png" alt="Surrogate Models tab" width="100%"><br>
+      <a href="assets/readme/tab_3_surrogate_models.png"><img src="assets/readme/thumbs/tab_3_surrogate_models.webp" alt="Surrogate Models tab" width="100%"></a><br>
       <b>3 · Surrogate Models</b> — M1, M2 and M3 with their inputs, training ranges, outputs, train and test RMSE, and the experiment behind each.
     </td>
     <td width="50%" valign="top">
-      <img src="assets/readme/tab_4_objective_cost.png" alt="Objective and Cost tab" width="100%"><br>
+      <a href="assets/readme/tab_4_objective_cost.png"><img src="assets/readme/thumbs/tab_4_objective_cost.webp" alt="Objective and Cost tab" width="100%"></a><br>
       <b>4 · Objective &amp; Cost</b> — compose objective terms and constraints, with a live, colour-coded readout of the resulting cost function.
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center" valign="top">
-      <img src="assets/readme/tab_5_optimise_report.png" alt="Optimise and Report tab" width="70%"><br>
+      <a href="assets/readme/tab_5_optimise_report.png"><img src="assets/readme/thumbs/tab_5_optimise_report.webp" alt="Optimise and Report tab" width="70%"></a><br>
       <b>5 · Optimise &amp; Report</b> — tune the swarm, run it, follow convergence, read the optimal-design report and export it.
     </td>
   </tr>

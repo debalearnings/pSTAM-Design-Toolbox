@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;background:transparent;font-family:Helvetica,Arial,sans-serif;color:#16242E}
+#card{position:relative;display:inline-block;background:#fff;border:1px solid #D7DEE4;border-radius:14px;padding:16px 16px 54px 16px}
+.row{display:flex;align-items:center}
+.box{border:2px solid #0E7C86;border-radius:8px;padding:8px 10px;text-align:center;font-size:14px;line-height:1.35;background:#fff;white-space:nowrap}
+.box b{font-size:14.5px}
+.io{background:#DDEFF1}.out{background:#FBF0E3;border-color:#C9772C}
+.conn{position:relative;width:30px;height:2px;background:#34434F;margin:0 2px}
+.conn:after{content:"";position:absolute;right:-1px;top:-5px;border-left:9px solid #34434F;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.conn.wide{width:78px}
+.lab{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-size:11.5px;color:#34434F;white-space:nowrap;text-align:center;line-height:1.25}
+#loop{position:absolute;left:0;top:0;overflow:visible;pointer-events:none}
+#looplab{position:absolute;font-size:11.5px;color:#34434F;background:#fff;padding:0 6px;white-space:nowrap;transform:translate(-50%,-50%)}
+sub{font-size:10px}
+</style></head><body><div id="card"><div class="row">
+<div class="box io" id="A"><b>Design space</b><br>bounds on<br>L · D · T · P</div><div class="conn"></div>
+<div class="box" id="B"><b>Particle swarm</b><br>candidate<br>designs</div><div class="conn"></div>
+<div class="box" id="C"><b>ANN surrogates</b><br>M1 δ · M2 t<sub>inf</sub><br>M3 t<sub>def</sub></div><div class="conn"></div>
+<div class="box" id="D"><b>Objective + penalties</b><br>weighted terms,<br>constraints</div><div class="conn wide"><div class="lab">after the last<br>iteration</div></div>
+<div class="box out" id="E"><b>Optimal design</b><br>report and<br>exports</div>
+</div><svg id="loop"></svg><div id="looplab">cost per particle, every iteration</div></div>
+<script>
+const card=document.getElementById('card').getBoundingClientRect();
+const B=document.getElementById('B').getBoundingClientRect(), D=document.getElementById('D').getBoundingClientRect();
+const svg=document.getElementById('loop'); svg.setAttribute('width',card.width); svg.setAttribute('height',card.height);
+const x1=D.left+D.width/2-card.left, x2=B.left+B.width/2-card.left, y0=D.bottom-card.top, y=y0+30;
+svg.innerHTML=`<path d="M ${x1} ${y0} L ${x1} ${y-8} Q ${x1} ${y} ${x1-8} ${y} L ${x2+8} ${y} Q ${x2} ${y} ${x2} ${y-8} L ${x2} ${y0+10}" fill="none" stroke="#34434F" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M ${x2-6} ${y0+11} L ${x2} ${y0+1} L ${x2+6} ${y0+11} Z" fill="#34434F"/>`;
+const L=document.getElementById('looplab'); L.style.left=((x1+x2)/2)+'px'; L.style.top=y+'px';
+</script></body></html>
