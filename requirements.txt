@@ -1,5 +1,5 @@
 # =====================================================================
-# pSTAM Design Toolbox — Core dependencies (all platforms)
+# pSTAM Design Toolbox: core dependencies (all platforms)
 # =====================================================================
 # Target: Python 3.10 or 3.11 inside a dedicated virtual environment.
 #

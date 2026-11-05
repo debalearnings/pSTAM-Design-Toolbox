@@ -1324,7 +1324,7 @@ class Toolbox(QMainWindow):
         rfl.addWidget(rh)
         for tag, txt in [("[1]", "Hybridized neural network inspired behavioural modelling of pneumatic artificial muscles for assistive robotic applications, Arora A., Sarkar D. et al. (2023). Industrial Robot, Vol. 50 No. 1 pp. 56–69, doi: https://doi.org/10.1108/IR-03-2022-0060"),
                          ("[2]", "Low-pressure pneumatic muscles: development, phenomenological modeling, and evaluation in assistive applications through sEMG analysis, Arora A., Sarkar D., Kumar A. et al. Journal of Mechanical Science and  Technology, Vol. 36, 4719–4733 (2022), doi: https://doi.org/10.1007/s12206-022-0832-0"),
-                         ("[3]", "Custom made silicone bladder based low pressure actuated pneumatic artificial muscle, Indian Patent Application: IN 202211021971 (Filed: 12/04/2022; Status: Pending)"),
+                         ("[3]", "Custom made silicone bladder based low pressure actuated pneumatic artificial muscle, Indian Patent No. 604983 (Application No. 202211021971; Filed: 12/04/2022; Granted: 05/10/2026)"),
                          ("[4]", "A method and apparatus for characterizing pneumatic artificial muscle actuators along with measurement of its air consumption under varying operating conditions, Indian Patent Application: IN 202211071703 (Filed: 13/12/2022; Status: Pending)")]:
             r = QLabel(f'<span style="color:{ACCENT}; font-weight:800;">{tag}</span>  '
                        f'<span style="color:{BODY};">{txt}</span>')

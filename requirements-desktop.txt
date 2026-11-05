@@ -1,5 +1,5 @@
 # =====================================================================
-# pSTAM Design Toolbox — x86-64 desktop dependencies
+# pSTAM Design Toolbox: x86-64 desktop dependencies
 # =====================================================================
 # For Windows and x86-64 Linux: the core dependencies plus PyQt5 from PyPI.
 # On ARM64 Linux (e.g. NVIDIA Jetson) do not use this file; install PyQt5

@@ -1,5 +1,5 @@
 =======================================================================
- pSTAM Design Toolbox — setup and run
+ pSTAM Design Toolbox: setup and run
 =======================================================================
 Requires Python 3.10 or 3.11. The pinned NumPy 1.x stack has no prebuilt
 wheels for Python 3.12 or newer.

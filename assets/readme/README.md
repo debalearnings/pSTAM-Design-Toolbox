@@ -5,7 +5,7 @@ These files appear only on the GitHub page (`README.md` at the repository root);
 | Page element | Loaded by the page | Full-size original |
 |:--|:--|:--|
 | Logo | `logo.webp` (600 px) | `../logo.png` |
-| Walkthrough clip | `toolbox_walkthrough.webp` (1024 × 576, looping) | — |
+| Walkthrough clip | `toolbox_walkthrough.webp` (1024 × 576, looping) | Not kept separately |
 | *How it works* diagram | `how_it_works.png` | `source/how_it_works.html` |
 | *The five tabs* | `thumbs/tab_*.webp` (1100 px) | `tab_1_home.png` … `tab_5_optimise_report.png` |
 

@@ -1,5 +1,5 @@
 =======================================================================
- pSTAM Design Toolbox — asset manifest
+ pSTAM Design Toolbox: asset manifest
 =======================================================================
 Images and clips shown inside the toolbox. Each has a labelled
 placeholder in the interface until the file is present; once a file with

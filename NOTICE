@@ -1,0 +1,25 @@
+pSTAM Design Toolbox
+Copyright (c) 2026 CSIR-Central Mechanical Engineering Research Institute
+(CSIR-CMERI), Durgapur, India.
+
+This repository is distributed under two licenses.
+
+1. Source code (all .py files) is licensed under the
+   PolyForm Noncommercial License 1.0.0. See LICENSE or
+   https://polyformproject.org/licenses/noncommercial/1.0.0
+
+2. All other content (documentation, README and setup notes, images,
+   animations, the logo, diagrams, and the files in data/) is licensed
+   under the Creative Commons Attribution-NonCommercial 4.0 International
+   License (CC BY-NC 4.0). See LICENSE-CC-BY-NC-4.0.txt or
+   https://creativecommons.org/licenses/by-nc/4.0/
+
+Both licenses permit noncommercial use only. For commercial use, contact
+CSIR-CMERI through the authors listed in README.md.
+
+The pneumatic artificial muscle and its characterisation apparatus are the
+subject of Indian Patent No. 604983 (granted 5 October 2026) and Indian
+patent application IN 202211071703.
+Neither license grants rights to make, use or sell that hardware; the patent
+license in the PolyForm terms covers only patent claims infringed by using
+the software itself.

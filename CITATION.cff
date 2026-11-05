@@ -3,8 +3,8 @@ message: "If you use this software, please cite it as below, together with the t
 title: "pSTAM Design Toolbox"
 abstract: "A desktop toolbox for the data-driven design of Pneumatic Silicone Tube Artificial Muscles (pSTAM): ANN surrogates of measured static contraction, inflation time and deflation time, inverted by particle-swarm optimisation over muscle length, outer diameter, wall thickness and actuation pressure."
 type: software
-license: MIT
-repository-code: "https://github.com/<github-username>/pSTAM-Design-Toolbox"
+license: PolyForm-Noncommercial-1.0.0
+repository-code: "https://github.com/debadrata/pSTAM-Design-Toolbox"
 keywords:
   - pneumatic artificial muscle
   - soft actuator
@@ -16,18 +16,15 @@ authors:
   - family-names: Sarkar
     given-names: Debadrata
     affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
-  - family-names: Arora
-    given-names: Aman
-    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
-  - family-names: Majumder
-    given-names: Arunabha
-    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
   - family-names: Sen
     given-names: Soumen
     affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
   - family-names: Roy
     given-names: Shibendu Shekhar
     affiliation: "National Institute of Technology Durgapur, India"
+  - family-names: Arora
+    given-names: Aman
+    affiliation: "Human-Centred Robotics and Cybernetics Group, CSIR-Central Mechanical Engineering Research Institute, Durgapur, India"
 references:
   - type: article
     title: "Hybridized neural network inspired behavioural modelling of pneumatic artificial muscles for assistive robotic applications"
@@ -69,3 +66,19 @@ references:
     end: 4733
     year: 2022
     doi: "10.1007/s12206-022-0832-0"
+  - type: patent
+    title: "Custom made silicone bladder based low pressure actuated pneumatic artificial muscle"
+    authors:
+      - family-names: Arora
+        given-names: Aman
+      - family-names: Sarkar
+        given-names: Debadrata
+      - family-names: Sen
+        given-names: Soumen
+      - family-names: Har
+        given-names: Chandan
+    patent-states:
+      - India
+    number: "604983"
+    date-released: "2026-10-05"
+    notes: "Application No. 202211021971, filed 2022-04-12; patentee: Council of Scientific and Industrial Research"
